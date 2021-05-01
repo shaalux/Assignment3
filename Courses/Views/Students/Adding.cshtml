@@ -1,0 +1,41 @@
+﻿@model Courses.Models.Students
+
+@{
+    ViewBag.Title = "Adding";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add a Student</h2>
+
+@using (Html.BeginForm("Create", "Students"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Id)
+        @Html.TextBoxFor(m => m.Id, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName)
+        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.AdmissionTermCode)
+        @Html.TextBoxFor(m => m.AdmissionTermCode, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.MajorId)
+        @Html.TextBoxFor(m => m.MajorId, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.DateOfBirth)
+        @Html.TextBoxFor(m => m.DateOfBirth, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Admit</button>
+
+
+}
+
